@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrom-board {
+    width: 500px;
+    height: 500px;
+    background-color: burlywood;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.edge {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+
+.game-space {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background-color: burlywood;
+    top: 30px;
+    left: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hole {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+#lefttop-hole {
+    border-radius: 15% 50% 50% 50%;
+    left: -3px;
+    top: -3px;
+    position: absolute;
+}
+
+#leftbottom-hole{
+    border-radius: 50% 50% 50% 15%;
+    left: -3px;
+    bottom: -3px;
+    position: absolute;
+}
+
+#righttop-hole{
+    border-radius: 50% 15% 50% 50%;
+    right: -3px;
+    top: -3px;
+    position: absolute;
+}
+
+#rightbottom-hole {
+    border-radius: 50% 50% 15% 50%;
+    right: -3px;
+    bottom: -3px;
+    position: absolute;
+}
+
+
+.ctr-cir {
+    border-radius: 50%;
+    border: 2px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#ctr-out-cir {
+    width: 150px;
+    height: 150px;
+}
+
+#ctr-in-cir {
+    width: 27px;
+    height: 27px;
+}
+
+
+.striker-placer {
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#top-line {
+    width: 310px;
+    height: 32px;
+    top: 38px;
+    left: 50%;
+    transform: translatex(-50%);
+    border-top: 4px solid black;
+}
+
+#left-line {
+    width: 32px;
+    height: 310px;
+    top: 50%;
+    left: 68px;
+    transform: translateY(-50%);
+    border-left: 4px solid black;
+}
+
+#bottom-line {
+    width: 310px;
+    height: 32px;
+    left: 50%;
+    bottom: 68px;
+    transform: translatex(-50%);
+    border-bottom: 4px solid black;
+}
+
+#right-line {
+    width: 32px;
+    height: 310px;
+    top: 50%;
+    right: 68px;
+    transform: translateY(-50%);
+    border-right: 4px solid black;
+}
+
+
+
+
+.striker-hole {
+    border-radius: 40px;
+    background-color: #d2215f;
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+#lf-top {
+    left: 0px;
+    bottom: 0px;
+}
+
+#lf-bottom {
+    left: 0px;
+    top: 0px;
+}
+
+#rt-top{
+    right: 0px;
+    bottom: 0px;
+}
+
+#rt-bottom {
+    top: 0px;
+    right: 0px;
+}
+
+#tp-left {
+    top: 0px;
+    right: 0px;
+}
+
+#tp-right {
+    left: 0px;
+    top: 0px;
+}
+
+#bt-right {
+    bottom: 0px;
+    left: 0px;
+}
+
+#bt-left {
+    bottom: 0px;
+    right: 0px;
+}
+
+
+
+/* Design Circle */
+.design-circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#cir-lftp {
+    top: 61px;
+    left: 61px;
+}
+
+#cir-rttp {
+    top: 61px;
+    right: 61px;
+}
+
+#cir-rtbt {
+    bottom: 61px;
+    right: 61px;
+}
+
+#cir-lfbt {
+    bottom: 61px;
+    left: 61px;
+}
+
+
+
+/* Slanting Line */
+.slanting-line {
+    width: 2px;
+    height: 130px;
+    position: absolute;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+#rttp-line {
+    top: 50px;
+    right: 115px;
+    transform: rotate(45deg);
+}
+
+#lftp-line {
+    top: 50px;
+    left: 115px;
+    transform: rotate(135deg);
+}
+
+#lfbt-line {
+    bottom: 50px;
+    left: 115px;
+    transform: rotate(45deg);
+}
+
+#rtbt-line {
+    bottom: 50px;
+    right: 115px;
+    transform: rotate(135deg);
+}
+
+
+/* Slant Line Semi Circle */
+.semi-cir {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 3px solid black;
+    border-bottom: 2px solid burlywood;
+    /* border-top: 2px solid black; */
+    /* border-left: 2px solid black; */
+    /* border-right: 2px solid black; */
+    position: absolute;
+    background-color: burlywood;
+    box-sizing: border-box;
+}
+
+#lfbt-semi {
+    left: 125px;
+    bottom: 125px;
+    transform: rotate(45deg);
+}
+
+#lftp-semi {
+    left: 125px;
+    top: 125px;
+    transform: rotate(135deg);
+}
+
+#rtbt-semi {
+    right: 125px;
+    top: 125px;
+    transform: rotate(225deg);
+}
+
+#rttp-semi {
+    right: 125px;
+    bottom: 125px;
+    transform: rotate(315deg);
+}
+
